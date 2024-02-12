@@ -139,7 +139,7 @@ This should resolve the issue and allow you to compile your project successfully
      ```
 
 🔹 **Acquire Testnet $ETH on L1 Sepolia:**
-1. Visit [sepoliafaucet.com](sepoliafaucet.com) to access the L1 Sepolia $ETH faucet.
+1. Visit [sepoliafaucet](https://sepoliafaucet.com/) to access the L1 Sepolia $ETH faucet.
 2. Follow the instructions on the faucet website to request testnet $ETH.
 3. Ensure that you have received the testnet $ETH in your L1 Sepolia wallet.
 
