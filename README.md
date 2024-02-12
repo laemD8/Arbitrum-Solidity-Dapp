@@ -1,4 +1,4 @@
-# Arbitrum Workshop Session 1: Decentralized Cupcake Vending Machine
+# Build a Decentralized Cupcake Vending Machine with Arbitrum
 
 This guide is based on the official [Arbitrum Quickstart Guide](https://docs.arbitrum.io/for-devs/quickstart-solidity-hardhat). We extend our gratitude to Arbitrum for providing comprehensive resources. Our project focuses on enhancing the learning experience and simplifying the execution of their tutorial.
 
