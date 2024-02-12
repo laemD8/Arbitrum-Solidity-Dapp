@@ -4,7 +4,7 @@ This guide is based on the official [Arbitrum Quickstart Guide](https://docs.arb
 
 ## Overview
 
-This project serves as a hands-on guide for "Arbitrum Workshop Session 1," a collaborative initiative by the [Blockchain Acceleration Foundation (BAF)](https://twitter.com/TheBAFNetwork) and [Arbitrum](https://twitter.com/arbitrum). In this workshop, we aim to explore the creation of a decentralized application using Arbitrum's cutting-edge technology. This guide represents a harmonious blend of Arbitrum's technology and BAF's commitment to advancing Web3 adoption on a global scale. Participants will gain insights into Ethereum scalability, smart contract development, and the practical implementation of blockchain solutions. This workshop acts as a launching pad for individuals eager to explore the vast possibilities and contribute to the evolving landscape of blockchain technology.
+This project serves as a practical guide for "Arbitrum Workshop Session 1," a collaborative initiative between the [Blockchain Acceleration Foundation (BAF)](https://twitter.com/TheBAFNetwork) and [Arbitrum](https://twitter.com/arbitrum). The workshop focuses on exploring the development of decentralized applications using Arbitrum's technology. This guide offers an integration of Arbitrum's technology with BAF's dedication to promoting Web3 adoption globally. Participants will gain valuable insights into Ethereum scalability, smart contract development, and the real-world application of blockchain solutions. The workshop provides an opportunity for individuals interested in exploring the potential of blockchain technology and contributing to its ongoing evolution.
 
 ## Getting Started
 
