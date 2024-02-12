@@ -6,13 +6,16 @@ This guide is based on the official [Arbitrum Quickstart Guide](https://docs.arb
 
 This project serves as a practical guide for "Arbitrum Workshop Session 1," a collaborative initiative between the [Blockchain Acceleration Foundation (BAF)](https://twitter.com/TheBAFNetwork) and [Arbitrum](https://twitter.com/arbitrum). The workshop focuses on exploring the development of decentralized applications using Arbitrum's technology. This guide offers an integration of Arbitrum's technology with BAF's dedication to promoting Web3 adoption globally. Participants will gain valuable insights into Ethereum scalability, smart contract development, and the real-world application of blockchain solutions. The workshop provides an opportunity for individuals interested in exploring the potential of blockchain technology and contributing to its ongoing evolution.
 
+> [!NOTE]
+> We invite you to delve deeper into this tutorial's analysis in the article: ["Building a Decentralized Cupcake Vending Machine with Arbitrum."](https://medium.com/@BAFTeam/build-a-decentralized-cupcake-vending-machine-with-arbitrum-87e96f7a0a7e)
+
 ## Getting Started
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) installed (Version 20.11.0 is recommended to mitigate potential errors)
-- [Yarn](https://yarnpkg.com/) package manager
-- [MetaMask](https://metamask.io/) browser extension
+- [Node.js](https://nodejs.org/) installed (Version 20.11.0 is recommended to mitigate potential errors).
+- [Yarn](https://yarnpkg.com/) package manager.
+- [MetaMask](https://metamask.io/) browser extension.
 
 ## Deployment
 
@@ -29,7 +32,7 @@ This project serves as a practical guide for "Arbitrum Workshop Session 1," a co
 > [!WARNING]
 > Anticipate the initial compilation to encounter errors. Proceed by following the instructions provided, then execute yarn hardhat compile repeatedly until it completes successfully.
 
-One common error you may encounter when running yarn hardhat compile is due to missing dependencies required by the @nomicfoundation/hardhat-toolbox plugin.
+One common error you may encounter when running yarn hardhat compile is due to missing dependencies required by the `@nomicfoundation/hardhat-toolbox` plugin.
 
 To address this issue, follow these steps:
 
@@ -57,7 +60,7 @@ This should resolve the issue and allow you to compile your project successfully
 🔹 **Run a Local Ethereum Network and Node:**
 
 1. Open a terminal window in your `decentralized-cupcakes` directory.
-2. Execute the following command to initiate Hardhat's integrated local Ethereum network `yarn hardhat node`.
+2. Execute the following command to initiate Hardhat's integrated local Ethereum network `yarn hardhat node`
 4. You should observe output indicating the HTTP and WebSocket JSON-RPC server at http://127.0.0.1:8545/. Additionally, test accounts with generated ETH balances will be displayed.
      ```
      ...
@@ -114,7 +117,7 @@ This should resolve the issue and allow you to compile your project successfully
 ### Deploy the Smart Contract to the Arbitrum Sepolia Testnet
 
 🔹 **Configure Metamask for Arbitrum Sepolia:**
-1. Click Metamask's network selector dropdown, then click "Add Network."
+1. Click Metamask's network selector dropdown, then click "Add Network".
 2. Choose "Add a network manually" and provide the following information:
    
      ```
@@ -127,7 +130,7 @@ This should resolve the issue and allow you to compile your project successfully
 🔹 **Update Hardhat Configuration:**
 1. Open hardhat.config.js in your project.
 2. Locate the line with const `SEPOLIA_TESTNET_PRIVATE_KEY = '';` and replace the empty string with the private key of your test account (e.g., 0xac0..f80).
-3. Uncomment the line `accounts: [SEPOLIA_TESTNET_PRIVATE_KEY];`.
+3. Uncomment the line `accounts: [SEPOLIA_TESTNET_PRIVATE_KEY];`
 
      ```
      // hardhat.config.js
@@ -170,6 +173,33 @@ This should resolve the issue and allow you to compile your project successfully
 3. Visit the [Arbitrum Quickstart Guide](https://docs.arbitrum.io/for-devs/quickstart-solidity-hardhat#deploy-the-smart-contract-to-the-arbitrum-sepolia-testnet) interface and paste your contract address into the provided field.
    
 - [ ] **Click on "Get cupcake!". This action will prompt you to sign a transaction using Metamask, allowing you to receive a cupcake from the deployed smart contract** 😆🧁
+
+### Deploy the smart contract to Arbitrum One Mainnet
+Now that we’ve verified that our smart contract works on Arbitrum’s Sepolia testnet, we’re ready to deploy it to Arbitrum One Mainnet. This follows the same process as deploying to Arbitrum’s Sepolia testnet, **except that we’ll need to pay a transaction fee in real $ETH instead of $ASPL.**
+
+> [!IMPORTANT]
+> Expect to encounter varying $ETH gas fees during this step — the [Gas and fees section](https://docs.arbitrum.io/arbos/gas) contains further information about how gas fees are determined for Arbitrum transactions.
+
+1. Specify the private key of the one-time-use deployment account that you’ll use to deploy your smart contract (and pay the transaction fee).
+     ```
+     hardhat.config.js
+     // ...
+     const ARBITRUM_MAINNET_TEMPORARY_PRIVATE_KEY = ''; // <- this should not begin with "0x"
+     // ...
+     accounts: [ARBITRUM_MAINNET_TEMPORARY_PRIVATE_KEY]; // <- uncomment this line
+     // ...
+     // ...
+     ```
+2. Deposit some $ETH into the wallet corresponding to the private key added to `hardhat.config.js`
+3. Run the following command to deploy your smart contract to Arbitrum One Mainnet: `yarn hardhat run scripts/deploy.js --network arbitrumOne`
+
+> [!NOTE]
+> You should see the following output: Cupcake vending machine deployed to `0xff825139321bd8fB8b720BfFC5b9EfDB7d6e9AB3`
+
+4. Visit [Arbiscan Explorer](https://arbiscan.io/address/0x...B3), replacing the `0x...B3` part of the URL with the full address of your deployed smart contract.
+5. Select Arbitrum One from Metamask’s dropdown, paste your contract address into the [VendingMachine](https://docs.arbitrum.io/for-devs/quickstart-solidity-hardhat#deploy-the-smart-contract-to-arbitrum-one-mainnet), and click “Get cupcake!”.
+
+- [x] **Now you should receive a prompt to sign a transaction, granting you an immutable cupcake** 🧁🫶
 
 ## Contributing
 Contributions are welcome! Feel free to open issues or submit pull requests.
