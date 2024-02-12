@@ -46,7 +46,7 @@ This should resolve the issue and allow you to compile your project successfully
 > [!NOTE]
 > After successful compilation, you should find the compiled artifacts at `decentralized-cupcakes/artifacts/contracts/VendingMachine.sol`
      
-- [ ] **Congratulations! You've successfully deployed the Cupcake Vending Machine smart contract to the Arbitrum Sepolia testnet** 😼🫵
+- [x] **Congratulations! You've successfully deployed the Cupcake Vending Machine smart contract to the Arbitrum Sepolia testnet** 😼🫵
 
 ### Deploy the Smart Contract Locally
 
@@ -109,7 +109,7 @@ This should resolve the issue and allow you to compile your project successfully
 4. Copy the contract address `(e.g., 0xe7...512)` from the deployment output.
 5. Visit the [Arbitrum Quickstart Guide](https://docs.arbitrum.io/for-devs/quickstart-solidity-hardhat#deploy-the-smart-contract-to-your-local-testnet) Interface and paste your contract address into the provided field.
 
-- [ ] **Click on "Get cupcake!". This action will prompt you to sign a transaction using Metamask, allowing you to receive a cupcake from the deployed smart contract** 🤠🧁
+- [x] **Click on "Get cupcake!". This action will prompt you to sign a transaction using Metamask, allowing you to receive a cupcake from the deployed smart contract** 🤠🧁
 
 ### Deploy the Smart Contract to the Arbitrum Sepolia Testnet
 
